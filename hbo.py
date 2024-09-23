@@ -63,13 +63,7 @@ class HBO(object):
         return reshape_points, reshape_labels
 
     def generate_samples(self, X, y, minority_class=None):
-        '''
-        todo：入口调用函数  计算每个少数样本权重
-        :param X:
-        :param y:
-        :param minority_class:
-        :return:
-        '''
+
         minority_points = X[y == minority_class].copy()
         majority_points = X[y != minority_class].copy()
         minority_labels = y[y == minority_class].copy()
